@@ -22,8 +22,14 @@
 # s_set = sorted(n_set.intersection(m_set))
 # print(s_set)
 
-n_list = [1, 13, 23, 32, 45, 17]
-m_list = [2, 32, 56, 45, 67, 17]
+# n_list = [1, 32, 23, 32, 45, 17]
+# m_list = [2, 32, 56, 45, 32, 17]
+
+n_list = list(map(int, input().split()))
+m_list = list(map(int, input().split()))
+
+# n_list = list()
+# m_list = list()
 
 res =[]
 
@@ -32,4 +38,8 @@ for i in n_list:
         if i == j:
             res.append(i)
 
-print(res)
+res = set(res) 
+sorted_res = sorted(res)
+
+
+print(sorted_res)
