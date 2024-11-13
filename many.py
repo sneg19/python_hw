@@ -4,30 +4,32 @@
 # Пользователь вводит 2 числа. n - кол-во элементов первого множества. m - кол-во
 # элементов второго множества. Затем пользователь вводит сами элементы множеств.
 
-# import random
-# n = int(input('Введите количество элементов первого массива: '))
-# list_1 = [random.randint(0, 100) for i in range(n)]
-# print(list_1)
+# from random import randint
+# n_list = list(randint(1, 20) for i in range(int(input('Введите кол-во элементов первого множества: '))))
+# print(n_list)
+# m_list = list(randint(1, 20) for i in range(int(input('Введите кол-во элементов второго множества: '))))
+# print(m_list)
+# s_list = sorted(n_list.intersection(m_list))
+# print(s_list)
 
-# # m = int(input('Введите количество эдементов второго массива: '))
-# list_2 = [random.randint(0, 100) for i in range(n)]
-# print(list_2)
+# from random import randint
+# n_list = list(randint(1, 20) for i in range(int(input('Введите кол-во элементов первого множества: '))))
+# print(n_list)
+# n_list = n_set = set
+# m_list = list(randint(1, 20) for i in range(int(input('Введите кол-во элементов второго множества: '))))
+# print(m_list)
+# m_list = m_set = set
+# s_set = sorted(n_set.intersection(m_set))
+# print(s_set)
 
-# # res = list()
+n_list = [1, 13, 23, 32, 45, 17]
+m_list = [2, 32, 56, 45, 67, 17]
 
-# for i in range(len(list_1)):
-#     for j in range(len(list_2)):
-#         if list_1[i] == list_2[j]:
-#             # res[i] = list_1[i]
-#             res = 
+res =[]
 
-# print(res)
+for i in n_list:
+    for j in m_list:
+        if i == j:
+            res.append(i)
 
-
-from random import randint
-n_set = set(randint(1, 20) for i in range(int(input('Введите кол-во элементов первого множества: '))))
-print(n_set)
-m_set = set(randint(1, 20) for i in range(int(input('Введите кол-во элементов второго множества: '))))
-print(m_set)
-s_set = sorted(n_set.intersection(m_set))
-print(s_set)
+print(res)
